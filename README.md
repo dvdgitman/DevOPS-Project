@@ -27,7 +27,7 @@ create ansible script for the following:
 1 - install docker on the app servers
 2 - start docker service
 3 - #disable SElinux#
-4 - pull and run dockerfile from dockerhub
+4 - pull and run dockerfile from dockerhub.
 
 
 
