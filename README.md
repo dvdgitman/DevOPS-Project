@@ -13,8 +13,9 @@ First search feature code steps:
 
 Infrastructure dependencies:
 
-package as a terraform script
-1 - create 3 **free** instances - 2 app instances, 1 MGMT instance (with ansible and docker)
+1 MGMT instance (with terraform ansible and docker) that will run:
+(package as a terraform script)
+1 - create 3 **free** instances - 2 app instances
 2 - create 1 load balancer
 3 - create SG that allows all traffic in, through http 80
     and llows secured traffic from MGMT instance, through ssh 22
