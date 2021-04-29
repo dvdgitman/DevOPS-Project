@@ -12,7 +12,7 @@ def get_url_status(urls):  # checks status for each url in list urls
 
 
 def main():
-    url = input("Text: ")
+    url = input("Enter a full URL 'https://yoursite.com': ")
     get_url_status(url)
 
 
