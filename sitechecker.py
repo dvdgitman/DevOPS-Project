@@ -1,15 +1,10 @@
 import requests
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
-
-
-@app.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/getstatus', methods=['POST'])
 def get_url_status(urls):  # checks status for each url in list urls
     variable = request.form['urls']
     # for url in urls:
