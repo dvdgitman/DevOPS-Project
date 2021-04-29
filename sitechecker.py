@@ -1,12 +1,14 @@
 import requests
-from flask import Flask, render_template, request
 
+<<<<<<< HEAD
 def index():
     return render_template('index.html')
 
+=======
+>>>>>>> 5d9552bebcc883f523851c1f46c246e5f4578551
 
 def get_url_status(urls):  # checks status for each url in list urls
-    variable = request.form['urls']
+
     # for url in urls:
     try:
         r = requests.get(urls)
@@ -21,5 +23,4 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, host="localhost")
     main()
