@@ -1,4 +1,5 @@
 import requests
+import flask
 
 
 def get_url_status(urls):  # checks status for each url in list urls
