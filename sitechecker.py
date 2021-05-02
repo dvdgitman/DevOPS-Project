@@ -5,7 +5,7 @@ def get_url_status(urls):  # checks status for each url in list urls
     # for url in urls:
     try:
         r = requests.get(urls)
-        print(urls + "\tStatus: " + str(r.status_code))
+        print(urls + "\tStatus: " + str(r.status_code)) # Prints the url and status of the site(Up/Down)
     except Exception as e:
         print(urls + " - The url is probably down or isn't written correctly.Make sure to add http or https. ")
 
