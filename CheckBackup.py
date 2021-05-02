@@ -14,8 +14,6 @@ def homepage():
 
 @app.route('/data', methods=['POST', 'GET'])
 def data():
-
-    # if submit button is clicked
     if request.method == "GET":
         return render_template('data.html')
     if request.get != 'url':
