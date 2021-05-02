@@ -1,20 +1,19 @@
+# importing Flask and other modules
+from flask import Flask, request, render_template
 import requests
 
-
-def get_url_status(urls):  # checks status for each url in list urls
-
-    # for url in urls:
-    try:
-        r = requests.get(urls)
-        print(urls + "\tStatus: " + str(r.status_code))
-    except Exception as e:
-        print(urls + " - The url is probably down or isn't written correctly.Make sure to add http or https. ")
+# Flask constructor
+app = Flask(__name__)
 
 
-def main():
-    url = input("Enter a full URL 'https://yoursite.com': ")
-    get_url_status(url)
+@app.route('/', methods=['POST', 'GET'])
+def homepage():
+    return render_template("index.html")
+
+@app.route('/data')
+def data():
+    return render_template('test.html')
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run()

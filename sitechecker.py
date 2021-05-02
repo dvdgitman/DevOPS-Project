@@ -2,7 +2,6 @@ import requests
 
 
 def get_url_status(urls):  # checks status for each url in list urls
-
     # for url in urls:
     try:
         r = requests.get(urls)
