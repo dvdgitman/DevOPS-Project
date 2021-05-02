@@ -1,6 +1,6 @@
 # importing Flask and other modules
-from flask import Flask, request, render_template, jsonify, make_response
-import requests
+from flask import Flask, request, render_template
+import webbrowser
 
 # Flask constructor
 app = Flask(__name__)
@@ -8,20 +8,18 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def homepage():
+    """Run a web UI."""
     return render_template("index.html")
 
 
-@app.route('/data')
-def data(urls):
-    if request.method == 'GET':
-        try:
-            r = requests.get(urls)
-            print(urls + "\tStatus: " + str(r.status_code))  # Prints the url and status of the site(Up/Down)
-        except Exception as e:
-            print(urls + " - The url is probably down or isn't written correctly.Make sure to add http or https. ")
+@app.route('/data', methods=['POST', 'GET'])
+def data():
+
+    # if submit button is clicked
+    if request.method == "GET":
         return render_template('data.html')
-    # if request.method != 'GET':
-    #     return render_template('url.html')
+    if request.get != 'url':
+        return render_template('url.html')
 
 
 if __name__ == '__main__':
