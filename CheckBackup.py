@@ -16,8 +16,8 @@ def homepage():
 def data():
     if request.method == "GET":
         return render_template('data.html')
-    if request.get != 'url':
-        return render_template('url.html')
+    # if request.get != 'url':
+    #     return render_template('url.html')
 
 
 if __name__ == '__main__':
